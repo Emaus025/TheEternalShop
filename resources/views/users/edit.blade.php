@@ -14,18 +14,28 @@
                         @method('PUT')
                         
                         <div class="mb-4">
-                            <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
-                            <input type="text" id="name" name="name" value="{{ old('name', $user->name) }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                            <label for="name" class="block text-sm font-medium ">Nombre</label>
+                            <input type="text" id="name" name="name" value="{{ old('name', $user->name) }}" class="mt-1 block w-full rounded-md text-black border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
                         </div>
 
                         <div class="mb-4">
-                            <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
-                            <input type="email" id="email" name="email" value="{{ old('email', $user->email) }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                            <label for="lastname" class="block text-sm font-medium ">Apellido</label>
+                            <input type="text" id="lastname" name="lastname" value="{{ old('lastname', $user->lastname) }}" class="mt-1 block w-full rounded-md text-black border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
                         </div>
 
                         <div class="mb-4">
-                            <label for="password" class="block text-sm font-medium text-gray-700">Contraseña (opcional)</label>
-                            <input type="password" id="password" name="password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
+                            <label for="age" class="block text-sm font-medium ">Edad</label>
+                            <input type="number" id="age" name="age" value="{{ old('age', $user->age) }}" class="mt-1 block w-full rounded-md text-black border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium ">Correo electrónico</label>
+                            <input type="email" id="email" name="email" value="{{ old('email', $user->email) }}" class="mt-1 block w-full rounded-md text-black border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm" required>
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="password" class="block text-sm font-medium ">Contraseña (opcional)</label>
+                            <input type="password" id="password" name="password" class="mt-1 block w-full rounded-md text-black border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm">
                         </div>
 
                         <div class="mt-4">

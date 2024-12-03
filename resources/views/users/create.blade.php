@@ -12,25 +12,38 @@
                     <form action="{{ route('users.store') }}" method="POST">
                         @csrf
                         <div class="mb-4">
-                            <label for="name" class="block text-sm font-medium text-gray-700">Nombre</label>
+                            <label for="name" class="block text-sm font-medium ">Nombre</label>
                             <input type="text" id="name" name="name" value="{{ old('name') }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-black" required>
                             @error('name') <div class="text-red-500 text-sm">{{ $message }}</div> @enderror
                         </div>
 
                         <div class="mb-4">
-                            <label for="email" class="block text-sm font-medium text-gray-700">Correo electrónico</label>
+                            <label for="lastname" class="block text-sm font-medium">Apellido</label>
+                            <input type="text" id="lastname" name="lastname" value="{{ old('lastname') }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-black" required>
+                            @error('lastname') <div class="text-red-500 text-sm">{{ $message }}</div> @enderror
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="age" class="block text-sm font-medium ">Edad</label>
+                            <input type="number" id="age" name="age" value="{{ old('age') }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-black"   min="1" 
+                            max="120" required>
+                            @error('age') <div class="text-red-500 text-sm">{{ $message }}</div> @enderror
+                        </div>
+
+                        <div class="mb-4">
+                            <label for="email" class="block text-sm font-medium ">Correo electrónico</label>
                             <input type="email" id="email" name="email" value="{{ old('email') }}" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-black" required>
                             @error('email') <div class="text-red-500 text-sm">{{ $message }}</div> @enderror
                         </div>
 
                         <div class="mb-4">
-                            <label for="password" class="block text-sm font-medium text-gray-700">Contraseña</label>
+                            <label for="password" class="block text-sm font-medium ">Contraseña</label>
                             <input type="password" id="password" name="password" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-black" required>
                             @error('password') <div class="text-red-500 text-sm">{{ $message }}</div> @enderror
                         </div>
 
                         <div class="mb-4">
-                            <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirmar contraseña</label>
+                            <label for="password_confirmation" class="block text-sm font-medium ">Confirmar contraseña</label>
                             <input type="password" id="password_confirmation" name="password_confirmation" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm text-black" required>
                         </div>
 

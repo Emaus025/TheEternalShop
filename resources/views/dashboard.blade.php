@@ -21,6 +21,8 @@
                         <thead>
                             <tr>
                                 <th class="px-4 py-2">Nombre</th>
+                                <th class="px-4 py-2">Apellido</th>
+                                <th class="px-4 py-2">Edad</th>
                                 <th class="px-4 py-2">Correo</th>
                                 <th class="px-4 py-2">Acciones</th>
                             </tr>
@@ -29,6 +31,8 @@
                             @foreach($users as $user)
                                 <tr>
                                     <td class="px-4 py-2">{{ $user->name }}</td>
+                                    <td class="px-4 py-2">{{ $user->lastname }}</td>
+                                    <td class="px-4 py-2">{{ $user->age }}</td>
                                     <td class="px-4 py-2">{{ $user->email }}</td>
                                     <td class="px-4 py-2">
                                         <a href="{{ route('users.edit', $user->id) }}" class="text-yellow-500">Editar</a>

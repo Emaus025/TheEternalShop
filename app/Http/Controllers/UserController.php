@@ -25,12 +25,16 @@ class UserController extends Controller
         // Validar y almacenar un nuevo usuario
         $request->validate([
             'name' => 'required|string|max:255',
+            'lastname' => 'required|string|max:255',
+            'age' => 'required|integer|min:1|max:120', 
             'email' => 'required|email|unique:users,email',
             'password' => 'required|string|min:8|confirmed',
         ]);
 
         User::create([
             'name' => $request->name,
+            'lastname' => $request->lastname,
+            'age' => $request->age,
             'email' => $request->email,
             'password' => bcrypt($request->password),
         ]);
@@ -49,12 +53,16 @@ class UserController extends Controller
         // Validar y actualizar un usuario
         $request->validate([
             'name' => 'required|string|max:255',
+            'lastname' => 'required|string|max:255',
+            'age' => 'required|integer|min:1|max:120', 
             'email' => 'required|email|unique:users,email,' . $user->id,
             'password' => 'nullable|string|min:8|confirmed',
         ]);
 
         $user->update([
             'name' => $request->name,
+            'lastname' => $request->lastname,
+            'age' => $request->age,
             'email' => $request->email,
             'password' => $request->password ? bcrypt($request->password) : $user->password,
         ]);
